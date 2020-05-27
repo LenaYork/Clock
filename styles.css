@@ -2,3 +2,19 @@
     width: 500px;
     height: 500px;
 } */
+
+@media (max-width: 550px) {
+
+    .clock {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 340px) {
+
+    .clock {
+        width: 200px;
+        height: 200px;
+    }
+}
