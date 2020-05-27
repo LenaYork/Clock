@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Clock-
 Clock using JS (canvas)
 
