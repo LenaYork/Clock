@@ -1,33 +1,39 @@
-let faceColor = document.getElementById('face-color').value;
-let handColor = document.getElementById('hand-color').value;
-let numberColor = document.getElementById('number-color').value;
+let faceColor;
+let handColor;
+let numberColor;
 
+function defineColors() {
+  faceColor = document.getElementById('face-color').value;
+  handColor = document.getElementById('hand-color').value;
+  numberColor = document.getElementById('number-color').value;
+}
 
-
-// console.log(faceColor, handColor, numberColor);
+document.getElementById('faceColor').addEventListener('onChange', drawClock);
+document.getElementById('handColor').addEventListener('onChange', drawClock);
+document.getElementById('numberColor').addEventListener('onChange', drawClock);
 
 function drawClock() {
+
+    defineColors();
 
     let canvas = document.getElementById("clock");
     let context = canvas.getContext("2d");
     let clockRadius = canvas.width/2.1;
 
-    // alert(clockRadius);
-
     //draw a clock face
     context.beginPath();
-    context.fillStyle = "black";
+    context.fillStyle = faceColor;
     context.arc(clockRadius +5 , clockRadius + 5, clockRadius, 0, 2*Math.PI);
     context.fill();
 
-    context.fillStyle = "purple";
+    context.fillStyle = handColor;
 
     //draw a lil circle inside
     context.beginPath();
     context.arc(clockRadius +5 , clockRadius + 5, 7, 0, 2*Math.PI);
     context.fill();
 
-    context.fillStyle = "purple"; //
+    context.fillStyle = numberColor; //
 
     //add numbers
     context.font = clockRadius / 10 + "px arial";
@@ -52,20 +58,19 @@ function drawClock() {
     let minutesAngle = minutes * 2 * Math.PI / 60;
     let secondsAngle = seconds * 2 * Math.PI / 60;
 
-    context.strokeStyle = "purple";
+    context.strokeStyle = handColor;
     context.moveTo(clockRadius + 5, clockRadius + 5);
     context.lineTo(clockRadius + clockRadius * 0.4 * Math.sin(hoursAngle), clockRadius - (clockRadius * 0.4 *  Math.cos(hoursAngle)));
     context.lineWidth = 5;
     context.stroke();
 
-
-    context.strokeStyle = "purple";
+    context.strokeStyle = handColor;
     context.moveTo(clockRadius + 5, clockRadius + 5);
     context.lineTo(clockRadius + clockRadius * 0.7 * Math.sin(minutesAngle), clockRadius - (clockRadius * 0.7 *  Math.cos(minutesAngle)));
     context.lineWidth = 3;
     context.stroke();
 
-    context.strokeStyle = "purple";
+    context.strokeStyle = handColor;
     context.moveTo(clockRadius + 5, clockRadius + 5);
     context.lineTo(clockRadius + clockRadius * 0.8 * Math.sin(secondsAngle), clockRadius - (clockRadius * 0.8 *  Math.cos(secondsAngle)));
     context.lineWidth = 1;
