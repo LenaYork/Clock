@@ -8,9 +8,25 @@
     <title>Clock</title>
 </head>
 <body>
-    <canvas id="clock" class="clock" width="500" height="500">
-        Please upgrade your browser
-    </canvas>
+    <div class="main-container">
+        <div class="buttons-container">
+            <div class="face-button">
+                <input type="color" id="face-color" value="#A735F3"></input>
+                <button class="user-button">Change face color</button>
+            </div>
+            <div class="hand-button">   
+                <input type="color" id="hand-color" value="#FFFFFF"></input>
+                <button class="user-button">Change hands color</button>
+            </div>
+            <div class="numbers-button">
+                <input type="color" id="number-color" value="#06460A"></input>
+                <button class="user-button">Change numbers color</button>
+            </div>    
+        </div>
+        <canvas id="clock" class="clock" width="500" height="500">
+            Please upgrade your browser
+        </canvas>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

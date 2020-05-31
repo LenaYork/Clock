@@ -19,6 +19,7 @@ function setTime() {
     context.arc(clockRadius +5 , clockRadius + 5, 7, 0, 2*Math.PI);
     context.fill();
 
+    context.fillStyle = "purple"; //
 
     //add numbers
     context.font = clockRadius / 10 + "px arial";
