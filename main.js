@@ -1,4 +1,12 @@
-function setTime() {
+let faceColor = document.getElementById('face-color').value;
+let handColor = document.getElementById('hand-color').value;
+let numberColor = document.getElementById('number-color').value;
+
+
+
+// console.log(faceColor, handColor, numberColor);
+
+function drawClock() {
 
     let canvas = document.getElementById("clock");
     let context = canvas.getContext("2d");
@@ -64,5 +72,5 @@ function setTime() {
     context.stroke();
   }
 
-setInterval(setTime, 1000);
+setInterval(drawClock, 1000);
 
