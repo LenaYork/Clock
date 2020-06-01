@@ -13,10 +13,17 @@
     flex-direction: column;
 }
 
+.buttons-container label, .buttons-container input {
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 .user-button{
     margin: 5px;
-    border-radius: 25px;
+    color: #3a332e;
 }
+
+
 
 @media (max-width: 550px) {
 
@@ -26,6 +33,8 @@
     }
 }
 
+
+
 @media (max-width: 340px) {
 
     .clock {
@@ -34,3 +43,26 @@
     }
 }
 
+@media (max-height: 560px) {
+
+    .clock {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-height: 450px) {
+
+    .clock {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media (max-height: 410px) {
+
+    .clock {
+        width: 300px;
+        height: 300px;
+    }
+}
