@@ -1,20 +1,12 @@
-let faceColor;
-let handColor;
-let numberColor;
 
-function defineColors() {
-  faceColor = document.getElementById('face-color').value;
-  handColor = document.getElementById('hand-color').value;
-  numberColor = document.getElementById('number-color').value;
-}
-
-document.getElementById('faceColor').addEventListener('onChange', drawClock);
-document.getElementById('handColor').addEventListener('onChange', drawClock);
-document.getElementById('numberColor').addEventListener('onChange', drawClock);
+// document.getElementById('faceColor').addEventListener('click', drawClock);
+// document.getElementById('handColor').addEventListener('onChange', drawClock);
+// document.getElementById('numberColor').addEventListener('onChange', drawClock);
 
 function drawClock() {
-
-    defineColors();
+  const faceColor = document.getElementById('face-color').value;
+  const handColor = document.getElementById('hand-color').value;
+  const numberColor = document.getElementById('number-color').value;
 
     let canvas = document.getElementById("clock");
     let context = canvas.getContext("2d");
